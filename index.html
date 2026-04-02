@@ -8,16 +8,12 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+* {margin:0; padding:0; box-sizing:border-box;}
 
 body {
   font-family: 'Inter', sans-serif;
-  background: #fdfaf7;
-  color: #2f2f2f;
+  background: #fff7fb;
+  color: #3a2e35;
 }
 
 /* NAV */
@@ -29,14 +25,14 @@ nav {
   justify-content: center;
   gap: 40px;
   padding: 20px;
-  background: rgba(253,250,247,0.7);
-  backdrop-filter: blur(12px);
+  background: rgba(255, 247, 251, 0.8);
+  backdrop-filter: blur(10px);
   z-index: 100;
 }
 
 nav a {
   text-decoration: none;
-  color: #555;
+  color: #a06c87;
   font-size: 13px;
   letter-spacing: 2px;
 }
@@ -44,68 +40,85 @@ nav a {
 /* HERO */
 header {
   height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+  text-align:center;
 }
 
 h1 {
   font-family: 'Playfair Display', serif;
   font-size: 80px;
-  letter-spacing: 2px;
+  color: #d89bb5;
 }
 
 .subtitle {
   margin-top: 15px;
-  font-size: 12px;
   letter-spacing: 3px;
-  color: #888;
+  font-size: 12px;
+  color: #b88a9e;
 }
 
 /* SECTION */
 section {
   padding: 120px 20px;
   max-width: 1000px;
-  margin: auto;
-  text-align: center;
+  margin:auto;
+  text-align:center;
 }
 
 h2 {
   font-family: 'Playfair Display', serif;
   margin-bottom: 20px;
+  color: #c97a9a;
 }
 
 p {
-  color: #666;
   max-width: 600px;
-  margin: auto;
+  margin:auto;
+  color: #6b5a63;
+}
+
+/* CARDS */
+.cards {
+  display:grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+  margin-top:40px;
+}
+
+.card {
+  background:white;
+  padding:30px;
+  border-radius:15px;
+  box-shadow: 0 10px 30px rgba(216,155,181,0.15);
 }
 
 /* GALLERY */
 .gallery {
-  margin-top: 50px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-  gap: 25px;
+  margin-top:50px;
+  display:grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
 }
 
 .gallery img {
-  width: 100%;
-  border-radius: 12px;
-  transition: 0.4s;
+  width:100%;
+  border-radius:12px;
+  transition:0.4s;
 }
 
 .gallery img:hover {
-  transform: scale(1.05);
+  transform:scale(1.05);
 }
 
 /* FOOTER */
 footer {
-  padding: 50px;
-  font-size: 12px;
-  text-align: center;
-  color: #aaa;
+  padding:50px;
+  text-align:center;
+  font-size:12px;
+  color:#a88a97;
 }
 </style>
 </head>
@@ -115,20 +128,39 @@ footer {
 <nav>
   <a href="#">HOME</a>
   <a href="#about">ABOUT</a>
+  <a href="#lifestyle">LIFESTYLE</a>
   <a href="#gallery">GALLERY</a>
 </nav>
 
 <header>
   <h1>asesthetic</h1>
-  <div class="subtitle">lifestyle • fitness • soft living</div>
+  <div class="subtitle">soft life • fitness • feminine energy</div>
 </header>
 
 <section id="about">
   <h2>About Me</h2>
   <p>
-    A curated space where fitness, femininity, and aesthetic living meet.  
-    This is more than a brand — it’s a lifestyle.
+    I’m building a lifestyle where confidence, fitness, and softness exist together.
+    This space is about becoming your best self while staying feminine, calm, and intentional.
   </p>
+</section>
+
+<section id="lifestyle">
+  <h2>My Lifestyle</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Fitness</h3>
+      <p>Glutes, strength, and consistency — becoming stronger every day.</p>
+    </div>
+    <div class="card">
+      <h3>Aesthetic Living</h3>
+      <p>Soft routines, clean spaces, and intentional habits.</p>
+    </div>
+    <div class="card">
+      <h3>Confidence</h3>
+      <p>Growing into a woman who knows her worth and energy.</p>
+    </div>
+  </div>
 </section>
 
 <section id="gallery">
@@ -138,8 +170,6 @@ footer {
     <img src="https://images.unsplash.com/photo-1518611012118-fdd7f1aef1c4">
     <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7">
     <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
-    <img src="https://images.unsplash.com/photo-1520975922326-3f4c6c5e9c7c">
-    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb">
   </div>
 </section>
 
